@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dBf-gt-hVb">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="v1z-zr-lSu">
+                                <rect key="frame" x="15" y="103" width="363" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="MySegmentActionController:" destination="BYZ-38-t0r" eventType="valueChanged" id="AzI-FN-Yem"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dEa-Wr-KXZ">
+                                <rect key="frame" x="15" y="149" width="363" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uiM-YB-Vrd">
+                                <rect key="frame" x="15" y="149" width="363" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dEa-Wr-KXZ" firstAttribute="top" secondItem="v1z-zr-lSu" secondAttribute="bottom" constant="15" id="1PT-ua-7Sd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="dEa-Wr-KXZ" secondAttribute="bottom" constant="15" id="AV7-Bc-DG9"/>
+                            <constraint firstItem="uiM-YB-Vrd" firstAttribute="top" secondItem="v1z-zr-lSu" secondAttribute="bottom" constant="15" id="OWB-KV-csW"/>
+                            <constraint firstItem="dEa-Wr-KXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QQH-QA-f8u"/>
+                            <constraint firstItem="uiM-YB-Vrd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="WFe-IQ-Abm"/>
+                            <constraint firstItem="v1z-zr-lSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XrM-4Q-nNh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiM-YB-Vrd" secondAttribute="trailing" constant="15" id="Zso-ie-Als"/>
+                            <constraint firstItem="v1z-zr-lSu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cQt-wH-Ccc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uiM-YB-Vrd" secondAttribute="bottom" constant="15" id="h4p-kk-Zfu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEa-Wr-KXZ" secondAttribute="trailing" constant="15" id="nBy-NH-qp5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v1z-zr-lSu" secondAttribute="trailing" constant="15" id="oMd-8r-1xG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bd7-Ts-KwG"/>
+                    <connections>
+                        <outlet property="MySegmentController" destination="v1z-zr-lSu" id="Yvl-mz-Tei"/>
+                        <outlet property="MyTable1" destination="dEa-Wr-KXZ" id="ZAB-4P-bG8"/>
+                        <outlet property="MyTable2" destination="uiM-YB-Vrd" id="a8b-V2-TJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.5419847328244" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4hc-EB-oBO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dBf-gt-hVb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jdr-OA-ref">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uew-hx-7nc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1q-eZ-usV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
